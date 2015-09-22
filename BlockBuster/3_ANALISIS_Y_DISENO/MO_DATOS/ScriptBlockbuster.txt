@@ -1,0 +1,192 @@
+create sequence id_cliente;
+create domain id_clien int default nextval('id_cliente') not null;
+create table Clientes(
+id_cliente id_clien unique,
+nombre_cliente varchar(20) not null,
+ape_pat varchar (20) not null,
+ape_mat varchar (25) not null,
+calle varchar (20) not null,
+numero int not null,
+colonia varchar (20) not null,
+ciudad varchar (20) not null,
+telefono long not null,
+inicio_membresia date not null,
+fin_membresia date not null,
+status character(1) DEFAULT 's'::bpchar,
+primary key(Id_cliente)
+); 
+
+create sequence id_tipo;
+create domain id_ti int default nextval('id_tipo') not null;
+create table Tipos(
+id_tipo id_ti unique,
+nombre_tipo varchar (15) not null,
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_tipo)
+);
+
+create sequence id_plataforma;
+create domain id_pla int default nextval('id_plataforma') not null;
+create table Plataformas(
+id_plataforma id_pla unique,
+nombre_plataforma varchar (20) not null,
+fecha_ingresop timestamp without time zone DEFAULT now(),
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_plataforma)
+);
+
+create sequence id_marca;
+create domain id_mar int default nextval('id_mara') not null;
+create table Marcas(
+id_marca id_mar unique,
+nombre_marca varchar (20) not null,
+fecha_ingresom timestamp without time zone DEFAULT now(),
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_marca)
+);
+
+create sequence id_modelo;
+create domain id_mo int default nextval('id_modelo') not null;
+create table Modelos(
+id_modelo id_mo unique,
+nombre_modelo varchar (20) not null,
+generacion varchar (20) not null,
+fecha_ingresomo timestamp without time zone DEFAULT now(),
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_modelo)
+);
+
+create sequence id_genero;
+create domain id_gene int default nextval('id_genero') not null;
+create table Generos(
+id_genero id_gene unique,
+nombre_genero varchar (20) not null,
+fecha_ingresog timestamp without time zone DEFAULT now(),
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_genero)
+);
+
+create sequence id_puesto;
+create domain id_pues int default nextval('id_puesto') not null;
+create table Puestos(
+id_puesto id_pues unique,
+puesto varchar (20) not null,
+fecha_ingresopu timestamp without time zone DEFAULT now(),
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_puesto)
+);
+
+create sequence id_turno;
+create domain id_tur int default nextval('id_turno') not null;
+create table Turnos(
+id_turno id_tur unique,
+horario_entrada varchar (10) not null,
+horario_salida varchar (10) not null,
+fecha_ingresotur timestamp without time zone DEFAULT now(),
+status character(1) DEFAULT 's'::bpchar,
+primary key(id_turno)
+);
+
+create sequence id_empleado;
+create domain id_emple int default nextval('id_empleado') not null;
+create table Empleados(
+id_empleado id_emple unique,
+nombre_emp varchar(20) not null,
+ape_pat varchar (20) not null,
+ape_mat varchar (25) not null,
+calle varchar (20) not null,
+numero int not null,
+colonia varchar (20) not null,
+ciudad varchar (20) not null,
+telefono long not null,
+sueldo float not null,
+status character(1) DEFAULT 's'::bpchar,
+id_puesto int not null,
+id_turno int not null,
+primary key(id_empleado),
+Foreign key(id_puesto) references Puestos(id_puesto) on delete cascade on update cascade,
+Foreign key(id_turno) references Turnos(id_turno) on delete cascade on update cascade
+); 
+
+create sequence codigo_juego;
+create domain id_juego int default nextval('codigo_juego') not null;
+create table Juegos(
+codigo_juego id_juego unique,
+titulo varchar (30) not null,
+precio_renta float not null,
+precio_compra float not null,
+status character(1) DEFAULT 's'::bpchar,
+id_plataforma int not null,
+id_genero int not null,
+id_tipo int not null,
+id_emp int not null,
+primary key(codigo_juego),
+Foreign key(id_plataforma) references Plataformas(id_plataforma) on delete cascade on update cascade,
+Foreign key(id_genero) references Generos(id_genero) on delete cascade on update cascade,
+Foreign key(id_tipo) references Tipos(id_tipo) on delete cascade on update cascade,
+Foreign key(id_emp) references Empleados(id_empleado) on delete cascade on update cascade
+);
+
+create sequence id_accesorios;
+create domain id_acce int default nextval('id_accesorios') not null;
+create table Accesorios(
+id_accesorios id_acce unique,
+nombre_acce varchar (30) not null,
+precio float not null,
+descripcion varchar (45) not null,
+status character(1) DEFAULT 's'::bpchar,
+id_plataforma int not null,
+primary key(id_accesorios),
+Foreign key(id_plataforma) references Plataformas(id_plataforma) on delete cascade on update cascade,
+);
+
+create sequence id_consola;
+create domain id_con int default nextval('id_consola') not null;
+create table Consolas(
+id_consola id_con unique,
+nombre_con varchar (20) not null,
+precio float not null,
+descripcion varchar (45) not null,
+status character(1) DEFAULT 's'::bpchar,
+id_marca int not null,
+id_modelo int not null,
+primary key(id_consola),
+Foreign key(id_marca) references Marcas(id_marca) on delete cascade on update cascade,
+Foreign key(id_modelo) references Modelos(id_modelo) on delete cascade on update cascade
+);
+
+
+create sequence id_renta;
+create domain id_ren int default nextval('id_renta') not null;
+create table Rentas(
+id_renta id_ren unique,
+fecha_inicio date not null,
+fecha_fin date not null,
+monto float not null,
+id_empleado int not null,
+id_cliente int not null,
+codigo_juego int not null,
+primary key(id_renta),
+Foreign key(id_empleado) references Empleados(id_empleado) on delete cascade on update cascade,
+Foreign key(id_cliente) references Clientes(id_cliente) on delete cascade on update cascade,
+Foreign key(codigo_juego) references Juegos(codigo_juego) on delete cascade on update cascade
+);
+
+create sequence id_compra;
+create domain id_comp int default nextval('id_compra') not null;
+create table Compras(
+id_compra id_comp unique,
+id_producto int not null,
+fecha date not null,
+primary key(id_compra)
+);
+
+create sequence id_venta
+create domain id_vent int default nextval('id_venta') not null;
+create table Ventas(
+id_venta id_vent unique,
+nombre_juego varchar (30) not null,
+precio float not null,
+descripcion varchar (45) not null,
+primary key(id_venta)
+);
