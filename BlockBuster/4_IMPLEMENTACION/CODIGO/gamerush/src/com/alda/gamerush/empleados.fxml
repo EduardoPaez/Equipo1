@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="789.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="499.0" fitWidth="814.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/textura-verde-1568.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="388.0" layoutX="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/oie_transparent.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutY="65.0" prefHeight="423.0" prefWidth="798.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0">
+        <tabs>
+          <Tab text="   Compras   ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="    Ventas     ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="     Rentas      ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="299.0" text="Rentar un Juego">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="34.0" layoutY="52.0" prefHeight="321.0" prefWidth="734.0" text="Datos de la Renta">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TitledPane collapsible="false" layoutX="14.0" layoutY="14.0" prefHeight="191.0" prefWidth="471.0" text="Datos del Juego">
+                                       <content>
+                                          <AnchorPane prefHeight="145.0" prefWidth="511.0">
+                                             <children>
+                                                <TextField layoutX="7.0" layoutY="25.0" prefHeight="25.0" prefWidth="130.0" />
+                                                <Label layoutX="7.0" layoutY="6.0" text="Nombre">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="7.0" layoutY="56.0" text="Precio de Renta">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField layoutX="7.0" layoutY="75.0" prefHeight="25.0" prefWidth="130.0" />
+                                                <TableView layoutX="177.0" layoutY="25.0" prefHeight="124.0" prefWidth="247.0">
+                                                  <columns>
+                                                    <TableColumn prefWidth="75.0" text="C1" />
+                                                    <TableColumn prefWidth="75.0" text="C2" />
+                                                  </columns>
+                                                </TableView>
+                                                <TextField layoutX="7.0" layoutY="126.0" prefHeight="25.0" prefWidth="130.0" />
+                                                <Label layoutX="7.0" layoutY="107.0" text="Buscar">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                 </children></AnchorPane>
+                          </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="     Registrar  Cliente      ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="234.0" text="Registrar un Nuevo Cliente">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="152.0" layoutY="58.0" prefHeight="227.0" prefWidth="494.0" text="Datos del Cliente">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="213.0" prefWidth="492.0">
+                                 <children>
+                                    <Label layoutX="32.0" layoutY="14.0" text="Nombre">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="68.0" text="Calle">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="32.0" layoutY="85.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField layoutX="189.0" layoutY="85.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="191.0" layoutY="68.0" text="Numero de Casa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="135.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+                                    <Button layoutX="369.0" layoutY="196.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;" />
+                                    <Button layoutX="341.0" layoutY="139.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Registrar" />
+                                    <TextField layoutX="32.0" layoutY="31.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="189.0" layoutY="14.0" text="Apellido Paterno">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="189.0" layoutY="31.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="339.0" layoutY="14.0" text="Apellido Materno">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="339.0" layoutY="31.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField layoutX="339.0" layoutY="85.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="339.0" layoutY="68.0" text="Colonia">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="128.0" text="Ciudad">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="32.0" layoutY="142.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="189.0" layoutY="128.0" text="Numero de Telefono">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="189.0" layoutY="142.0" prefHeight="25.0" prefWidth="130.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="     Registrar  Juego        ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="33.0" layoutY="63.0" prefHeight="298.0" prefWidth="366.0" text="Datos del Juego">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="32.0" layoutY="14.0" text="Titulo">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="32.0" layoutY="31.0" prefHeight="25.0" prefWidth="294.0" />
+                                    <Label layoutX="32.0" layoutY="68.0" text="Precio de Venta">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="32.0" layoutY="85.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField layoutX="196.0" layoutY="85.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <Label layoutX="196.0" layoutY="68.0" text="Precio de Renta">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="32.0" layoutY="128.0" text="Plataforma">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="32.0" layoutY="145.0" prefHeight="25.0" prefWidth="103.0" />
+                                    <Button layoutX="135.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/132.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="196.0" layoutY="128.0" text="Genero">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="196.0" layoutY="145.0" prefHeight="25.0" prefWidth="103.0" />
+                                    <Button layoutX="299.0" layoutY="142.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/132.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label layoutX="32.0" layoutY="191.0" text="Tipo">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="32.0" layoutY="208.0" prefHeight="25.0" prefWidth="103.0" />
+                                    <Button layoutX="198.0" layoutY="205.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="127.0" text="Registrar" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <Label layoutX="240.0" layoutY="14.0" text="Registrar un Nuevo Juego">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="292.0" fitWidth="234.0" layoutX="491.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/crysis_3-2208439.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="     Registrar  Accesorio      ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="218.0" layoutY="14.0" text="Registrar un Nuevo Accesorio">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="37.0" layoutY="52.0" prefHeight="310.0" prefWidth="306.0" text="Datos del Accesorio">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField layoutX="13.0" layoutY="37.0" prefHeight="25.0" prefWidth="274.0" />
+                                    <Label layoutX="14.0" layoutY="20.0" text="Nombre del Accesorio">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="79.0" text="Precio">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="14.0" layoutY="96.0" prefHeight="25.0" prefWidth="138.0" />
+                                    <Label layoutX="14.0" layoutY="134.0" text="Descripción">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea layoutX="17.0" layoutY="151.0" prefHeight="51.0" prefWidth="268.0" />
+                                    <Label layoutX="17.0" layoutY="217.0" text="Plataforma">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="17.0" layoutY="234.0" prefHeight="25.0" prefWidth="100.0" />
+                                    <Button layoutX="120.0" layoutY="231.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/132.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="182.0" layoutY="234.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" text="Registrar" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <ImageView fitHeight="256.0" fitWidth="300.0" layoutX="431.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/accesorio-sony-ps4-cargador-mando-dualshock___9230779-1.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Registrar Consola ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="59.0" layoutY="45.0" prefHeight="319.0" prefWidth="306.0" text="Datos de la Consola">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="298.0" prefWidth="304.0">
+                                 <children>
+                                    <TextField layoutX="13.0" layoutY="37.0" prefHeight="25.0" prefWidth="274.0" />
+                                    <Label layoutX="14.0" layoutY="20.0" text="Nombre de la Consola">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="79.0" text="Precio">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField layoutX="14.0" layoutY="96.0" prefHeight="25.0" prefWidth="138.0" />
+                                    <Label layoutX="14.0" layoutY="134.0" text="Descripción">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextArea layoutX="17.0" layoutY="151.0" prefHeight="51.0" prefWidth="268.0" />
+                                    <Label layoutX="169.0" layoutY="79.0" text="Marca">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox layoutX="163.0" layoutY="96.0" prefHeight="25.0" prefWidth="100.0" />
+                                    <Button layoutX="257.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/132.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="169.0" layoutY="231.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="103.0" text="Registrar" />
+                                    <ComboBox layoutX="18.0" layoutY="231.0" prefHeight="25.0" prefWidth="100.0" />
+                                    <Label layoutX="17.0" layoutY="214.0" text="Modelo">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="119.0" layoutY="228.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="34.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/132.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                        <Label layoutX="218.0" layoutY="7.0" text="Registrar una Nueva Consola">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="230.0" fitWidth="317.0" layoutX="413.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/playstation4-.jpg" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="481.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="581.0" fitWidth="861.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/textura-verde-1568.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="122.0" fitWidth="380.0" layoutX="241.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/oie_transparent.png" />
+         </image>
+      </ImageView>
+      <TabPane layoutY="76.0" prefHeight="405.0" prefWidth="861.0" tabClosingPolicy="UNAVAILABLE" tabMinHeight="30.0">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
